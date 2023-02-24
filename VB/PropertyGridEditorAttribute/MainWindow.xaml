@@ -50,7 +50,7 @@
             <dxprg:CollectionDefinition HeaderShowMode="OnlyHeader" AllowRemoveItems="False"/>
         </DataTemplate>
         <DataTemplate x:Key="PropertyTemplate">
-            <dxprg:PropertyDefinition Header="Full Adress" HeaderShowMode="OnlyHeader"/>
+            <dxprg:PropertyDefinition Header="Full Address" HeaderShowMode="OnlyHeader"/>
         </DataTemplate>
     </Window.Resources>
 
