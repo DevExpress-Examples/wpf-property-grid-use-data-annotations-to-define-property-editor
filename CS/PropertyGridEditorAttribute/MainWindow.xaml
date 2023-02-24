@@ -1,0 +1,61 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:dxprg="http://schemas.devexpress.com/winfx/2008/xaml/propertygrid"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:PropertyGridEditor_Attribute"
+    x:Class="PropertyGridEditor_Attribute.MainWindow"
+    mc:Ignorable="d"
+    Title="MainWindow" Width="400" Height="500">
+    <dxmvvm:Interaction.Behaviors>
+        <dx:DialogService DialogWindowStartupLocation="CenterOwner">
+            <dx:DialogService.ViewTemplate>
+                <DataTemplate>
+                    <dxlc:DataLayoutControl CurrentItem="{Binding}"
+                                            Orientation="Vertical"/>
+                </DataTemplate>
+            </dx:DialogService.ViewTemplate>
+            <dx:DialogService.DialogStyle>
+                <Style TargetType="Window">
+                    <Setter Property="Width" Value="260"/>
+                    <Setter Property="Height" Value="240"/>
+                </Style>
+            </dx:DialogService.DialogStyle>
+        </dx:DialogService>
+    </dxmvvm:Interaction.Behaviors>
+
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+
+    <Window.Resources>
+        <DataTemplate x:Key="ButtonEditTemplate">
+            <dxe:ButtonEdit Name="PART_Editor" 
+                            IsTextEditable="False" 
+                            AllowDefaultButton="False">
+                <dxe:ButtonEdit.Buttons>
+                    <dxe:ButtonInfo GlyphKind="Edit" 
+                                    CommandParameter="{Binding RelativeSource={RelativeSource Self}, Path=(dxe:BaseEdit.OwnerEdit).EditValue}"
+                                    Command="{Binding RelativeSource={RelativeSource Self}, 
+                                                      Path=(dxprg:PropertyGridHelper.PropertyGrid).DataContext.EditEmployeeCommand}"/>
+                </dxe:ButtonEdit.Buttons>
+            </dxe:ButtonEdit>
+        </DataTemplate>
+        <DataTemplate x:Key="CollectionDefinitionTemplate">
+            <dxprg:CollectionDefinition HeaderShowMode="OnlyHeader" AllowRemoveItems="False"/>
+        </DataTemplate>
+        <DataTemplate x:Key="PropertyTemplate">
+            <dxprg:PropertyDefinition Header="Full Adress" HeaderShowMode="OnlyHeader"/>
+        </DataTemplate>
+    </Window.Resources>
+
+    <dxprg:PropertyGridControl ExpandCategoriesWhenSelectedObjectChanged="True"
+                               ShowCategories="False"
+                               ShowEditorButtons="True"
+                               SelectedObject="{Binding Department}"/>
+</Window>
