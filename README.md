@@ -5,26 +5,27 @@
 <!-- default badges end -->
 # WPF Property Grid - Use the PropertyGridEditor Attribute to Define a Property Editor
 
-This is the repository template for creating new examples. Describe the solved task here.
+This example demonstrates how to use the `PropertyGridEditor` attribute. This attribute allows you to apply a property definition or property editor template at the data model level.
 
-Put a screenshot that illustrates the result here.
+![image](https://user-images.githubusercontent.com/65009440/221129855-2f05c8d5-0a38-4db5-8357-a078c730386f.png)
 
-Then, add implementation details (steps, code snippets, and other technical information in a free form), or add a link to an existing document with implementation details. 
+In this example, **Employee** objects contain an edit button in their editors. This button opens the dialog that allows you to edit object properties.
+
+Templates with the [PropertyDefinition](https://docs.devexpress.com/WPF/15521/controls-and-libraries/property-grid/property-definitions) and [CollectionDefinition](https://docs.devexpress.com/WPF/15719/controls-and-libraries/property-grid/property-definitions/collection-definitions) are applied to the **Location** and **Employees** properties, respectively.
 
 ## Files to Review
 
-- link.cs (VB: link.vb)
-- link.js
-- ...
+- [Data.cs](./CS/PropertyGridEditorAttribute/Data.cs) (VB: [Data.vb](./VB/PropertyGridEditorAttribute/Data.vb))
+- [ViewModel.cs](./CS/PropertyGridEditorAttribute/ViewModel.cs) (VB: [ViewModel.vb](./VB/PropertyGridEditorAttribute/ViewModel.vb))
+- [MainWindow.xaml](./CS/PropertyGridEditorAttribute/MainWindow.xaml) (VB: [MainWindow.xaml](./VB/PropertyGridEditorAttribute/MainWindow.xaml))
 
 ## Documentation
 
-- link
-- link
-- ...
+- [Property Attributes](https://docs.devexpress.com/WPF/15623/controls-and-libraries/property-grid/property-attributes)
+- [Customize Properties](https://docs.devexpress.com/WPF/401044/controls-and-libraries/property-grid/property-definitions/customize-properties)
+- [Expandability Customization](https://docs.devexpress.com/WPF/117149/controls-and-libraries/property-grid/expandability-customization)
+- [Bind to Property Grid and its Elements](https://docs.devexpress.com/WPF/403662/controls-and-libraries/property-grid/bind-to-property-grid-in-xaml)
 
 ## More Examples
 
-- link
-- link
-- ...
+- [WPF Property Grid - Apply Data Annotation Attributes](https://github.com/DevExpress-Examples/wpf-property-grid-apply-data-annotation-attributes)
