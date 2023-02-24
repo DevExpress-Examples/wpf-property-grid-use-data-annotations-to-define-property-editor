@@ -7,7 +7,7 @@
 
 This example demonstrates how to use the `PropertyGridEditor` attribute. This attribute allows you to apply a property definition or property editor template at the data model level.
 
-![image](https://user-images.githubusercontent.com/65009440/221129855-2f05c8d5-0a38-4db5-8357-a078c730386f.png)
+![image](https://user-images.githubusercontent.com/65009440/221146096-1da027de-5582-492d-a69e-8dbaa19354fa.png)
 
 In this example, **Employee** objects contain an edit button in their editors. This button opens the dialog that allows you to edit object properties.
 
