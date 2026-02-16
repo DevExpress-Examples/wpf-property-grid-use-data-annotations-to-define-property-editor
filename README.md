@@ -31,7 +31,7 @@ Templates with the [PropertyDefinition](https://docs.devexpress.com/WPF/15521/co
 
 - [WPF Property Grid - Apply Data Annotation Attributes](https://github.com/DevExpress-Examples/wpf-property-grid-apply-data-annotation-attributes)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-property-grid-use-data-annotations-to-define-property-editor&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-property-grid-use-data-annotations-to-define-property-editor&~~~was_helpful=no)
 
